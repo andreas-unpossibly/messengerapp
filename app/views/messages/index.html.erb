@@ -1,0 +1,20 @@
+<div class="messages">
+  <div class="container">
+  
+    <% @messages.each do |message| %>
+    <div class="message">
+      <p class="content">
+        <%= message.content %> <br> 
+        <%= message.author %>
+      </p>
+      <p class="time">
+        <%= message.created_at %>
+      </p>
+    </div>
+		<% end %>
+    
+    <%= link_to 'This is a link that goes to messages/new', "messages/new" %>
+  </div>
+</div>
+
+
